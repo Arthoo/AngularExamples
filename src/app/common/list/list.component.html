@@ -1,0 +1,23 @@
+<!-- List Header -->
+<app-list-header [title]="title" [search$]="search$"></app-list-header>
+<!-- List Content -->
+<div class="list-container">
+  <ng-container *ngIf="itemsDisplayed$ | async as itemsDisplayed">
+    <!-- No Items Message -->
+    <ng-template #noItems>
+      <div class="no-items">
+        No items found
+      </div>
+    </ng-template>
+    <!-- List Items -->
+    <ng-container *ngIf="itemsDisplayed?.length; else noItems">
+      <ng-container *ngFor="let item of itemsDisplayed">
+        <!-- Template inserted here for each item -->
+        <ng-container *ngTemplateOutlet="itemTemplate; context: { item: item }">
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</div>
+<!-- List Footer -->
+<app-list-footer [pagination$]="pagination$"></app-list-footer>

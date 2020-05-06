@@ -1,0 +1,5 @@
+<app-list [title]="'Dogs'" [items]="dogs" [doesMatchSearch]="doesMatchSearch">
+  <ng-template #itemTemplate let-dog="item">
+    <app-dog [dog]="dog"></app-dog>
+  </ng-template>
+</app-list>
