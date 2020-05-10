@@ -1,0 +1,19 @@
+.content {
+  padding: 2rem;
+  width: 900px;
+  margin: auto;
+}
+p {
+  font-size: 1.2rem;
+}
+
+.lists {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.lists > * {
+  margin: 1rem;
+}

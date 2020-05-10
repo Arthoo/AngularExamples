@@ -1,0 +1,23 @@
+.filename {
+  position: relative;
+  top: -1rem;
+  text-align: right;
+}
+
+.filename span {
+  background: #007f82;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+pre {
+  background-color: white;
+  padding: 1rem;
+  margin: 4rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  color: #007f82;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}

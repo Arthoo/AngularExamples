@@ -5,13 +5,11 @@ export type Dog = {
   name: string;
   description: string;
   url: string;
-  coolness?: number;
 };
 
 @Component({
   selector: 'app-dogs',
-  templateUrl: './dogs.component.html',
-  styleUrls: ['./dogs.component.css'],
+  templateUrl: './dogs.component.html'
 })
 export class DogsComponent {
   dogs = DOGS;
