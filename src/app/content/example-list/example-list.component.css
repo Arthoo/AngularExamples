@@ -1,19 +1,24 @@
-.content {
-  padding: 2rem;
-  width: 900px;
-  margin: auto;
+.github {
+  display: inline-block;
+  background: white;
+  border-radius: 4rem;
+  padding: 1rem;
+  border: 2px solid var(--primary);
 }
-p {
-  font-size: 1.2rem;
+.github img {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+.github span {
+  color: var(--primary);
+  padding: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .lists {
-  display: flex;
-  padding: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.lists > * {
-  margin: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
 }

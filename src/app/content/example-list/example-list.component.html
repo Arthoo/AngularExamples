@@ -1,11 +1,23 @@
 <div class="content">
   <h1>Generic lists in Angular</h1>
+
+  <div class="github">
+    <a href="https://github.com/Arthoo/AngularExamples">
+      <img src="./assets/github.png" />
+      <span>Source code on Github</span>
+    </a>
+  </div>
+
   <p>
     In this example you will see how we can create a list component where we can
-    specify which component to use for displaying the items.
+    specify which component to use for displaying the items. This can be very
+    useful if you would like to have several lists in your application with the
+    same style and functionalities for search/filter/pagination but with
+    different content.
   </p>
   <p>
-    The two lists below are instances of the same list component but uses different components to display the items inside.
+    The two lists below are instances of the same list component but uses
+    different components to display the items inside.
   </p>
   <div class="lists">
     <app-cats></app-cats>
@@ -13,13 +25,35 @@
   </div>
 
   <p>
-    In our list component we have two Inputs: the list of items and a template reference.
+    Let's see how this can be done with the following example. In our list
+    component we have an input for the list of item data, and a template
+    reference with the component to be used.
   </p>
 
-  <app-code-section [code]="code.listTs" [filename]="'list.component.ts'"></app-code-section>
+  <app-code-section
+    [code]="code.listTs"
+    [filename]="'list.component.ts'"
+  ></app-code-section>
 
-  <app-code-section [code]="code.listHtml" [filename]="'list.component.html'"></app-code-section>
+  <p>
+    Inside the list template we iterate over the list items and use
+    <em>*ngTemplateOutlet</em> to instantiate the referenced component for each
+    item. By setting the item data in the context we can provide it to the
+    component we instantiate.
+  </p>
 
-  <app-code-section [code]="code.cats" [filename]="'cats.component.html'"></app-code-section>
+  <app-code-section
+    [code]="code.listHtml"
+    [filename]="'list.component.html'"
+  ></app-code-section>
 
+  <p>
+    When using the list component, we can simply provide the item component in a
+    template inside. The item data can be accessed by assigning a template input
+    variable (<em>let-cat="item"</em> in this example).
+  </p>
+  <app-code-section
+    [code]="code.cats"
+    [filename]="'cats.component.html'"
+  ></app-code-section>
 </div>

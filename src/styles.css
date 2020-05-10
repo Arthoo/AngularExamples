@@ -1,8 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --primary: #007f82;
+  --primary-dark: #00434c;
+}
+
 html {
   height: 100%;
-  background-image: url("./assets/coulds.jpg");
+  background-image: url("./assets/clouds.jpg");
   background-attachment: fixed;
 }
 
@@ -10,7 +15,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  color: #00434c;
+  color: var(--primary-dark);
 }
 
 h1,
@@ -19,4 +24,18 @@ h3,
 h4,
 h5 {
   font-weight: 400;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.content > div, p {
+  margin: 2rem 0;
 }
