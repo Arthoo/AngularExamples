@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './example-list.component.html',
   styleUrls: ['./example-list.component.css'],
 })
-export class GenericListComponent {
+export class ExampleListComponent {
   code = {
     listTs: `export class ListComponent implements OnInit {
 

@@ -1,22 +1,3 @@
-.github {
-  display: inline-block;
-  background: white;
-  border-radius: 4rem;
-  padding: 1rem;
-  border: 2px solid var(--primary);
-}
-.github img {
-  width: 2rem;
-  height: 2rem;
-  vertical-align: middle;
-}
-.github span {
-  color: var(--primary);
-  padding: 0.5rem;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .lists {
   display: grid;
   grid-auto-flow: column;
