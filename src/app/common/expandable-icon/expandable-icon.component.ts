@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <ng-template #noLink>
       <img [src]="icon" />
-      <span>{{ text }}</span>
+      <span appTest="'blue'">{{ text }}</span>
     </ng-template>
     <ng-container *ngIf="link; else noLink">
       <a [href]="link">

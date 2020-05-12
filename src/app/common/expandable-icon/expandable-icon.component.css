@@ -16,11 +16,7 @@ img {
   width: 2rem;
   height: 2rem;
   vertical-align: middle;
-  opacity: 0.8;
   transition: opacity ease-out 200ms;
-}
-:host:hover img {
-  opacity: 1;
 }
 
 span {

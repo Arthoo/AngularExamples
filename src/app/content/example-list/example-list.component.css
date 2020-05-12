@@ -1,3 +1,13 @@
+.example-title {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  align-items: center;
+}
+.example-icon {
+  text-align: right;
+}
+
 .lists {
   display: grid;
   grid-auto-flow: column;

@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .filename {
   position: relative;
   top: -1rem;
