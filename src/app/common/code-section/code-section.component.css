@@ -7,7 +7,6 @@
   top: -1rem;
   text-align: right;
 }
-
 .filename span {
   background: var(--primary);
   color: white;
@@ -23,4 +22,8 @@ pre {
   font-size: 1rem;
   color: var(--primary);
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.code {
+  overflow-x: auto;
 }

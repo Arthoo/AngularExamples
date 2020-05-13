@@ -18,7 +18,7 @@ export class ExampleListComponent {
   ...
 `,
     listHtml: `...
-<ng-container *ngFor="let item of itemsDisplayed">
+<ng-container *ngFor="let item of items">
 
   <!-- The provided template will be instantiated here for each item -->
   <ng-container *ngTemplateOutlet="itemTemplate; context: { item: item }">
@@ -26,7 +26,7 @@ export class ExampleListComponent {
 
 </ng-container>
 ...`,
-    cats: `<app-list [title]="'Cats'" [items]="cats" [doesMatchSearch]="doesMatchSearch">
+    cats: `<app-list [items]="cats">
 
   <!-- This template contains the component that will be instantiated for each list item -->
   <ng-template #itemTemplate let-cat="item">
