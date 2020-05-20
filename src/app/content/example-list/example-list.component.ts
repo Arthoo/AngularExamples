@@ -9,7 +9,7 @@ export class ExampleListComponent {
   code = {
     listTs: `export class ListComponent implements OnInit {
 
-  // List item data
+  // Item data list
   @Input() items: any[];
 
   // Reference to the template with component to instantiate

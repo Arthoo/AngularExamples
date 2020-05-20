@@ -12,11 +12,19 @@
   </div>
 
   <p>
-    In this example you will see how we can create a list component where we can
-    specify which component to use for displaying the items. This can be very
-    useful if you would like to have several lists in your application with the
-    same style and functionalities for search/filter/pagination but with
-    different content.
+    In Angular we can use content projection to insert content inside the
+    template of a component. This is useful in many scenarios, but it does not
+    work when we iterate over a list of items and want to pass the item to the
+    projected component.
+  </p>
+  <p>
+    The following example shows how to create a list component that can have a
+    custom component for displaying items inside. This can be very useful if you
+    would like to have several lists in your application with the same style and
+    functionalities for search/filter/pagination but with different content. The
+    same technique could be used for other components that iterate over items
+    and you would like to provide a custom component depending on where it is
+    used, e.g. select/drop-downs.
   </p>
   <p>
     The two lists below are instances of the same list component but uses
@@ -28,9 +36,8 @@
   </div>
 
   <p>
-    Let's see how this can be done with the following example. In our list
-    component we have an input for the list of item data, and a template
-    reference with the component to be used.
+    In the list component we have an input for the list of item data, and a
+    template reference with the component to be used for displaying each item.
   </p>
 
   <app-code-section
@@ -51,9 +58,10 @@
   ></app-code-section>
 
   <p>
-    When using the list component, we can simply provide the item component in a
-    template inside. The item data can be accessed by assigning a template input
-    variable (<em>let-cat="item"</em> in this example).
+    When using the list component, we can simply add a nested item component
+    within a template inside the list. The item data can be accessed by
+    assigning a template input variable (<em>let-cat="item"</em> in this
+    example).
   </p>
   <app-code-section
     [code]="code.cats"
