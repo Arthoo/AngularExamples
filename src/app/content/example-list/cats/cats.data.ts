@@ -8,7 +8,7 @@ export const CATS: Cat[] = [
   },
   {
     name: 'Cat 2',
-    description: 'Cat stretching on a vinyl player',
+    description: 'Cat stretching on a record player',
     url: './assets/cats/02.jpg',
   },
   {
