@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CodeSectionComponent {
   @Input() code: string;
-  @Input() filename: string;
+  @Input() filename?: string;
 }

@@ -11,39 +11,50 @@
     </div>
   </div>
 
+  <h2>Limitation of content projection</h2>
+
   <p>
-    In Angular we can use content projection to insert content inside the
-    template of a component. This is useful in many scenarios, but it does not
-    work when we iterate over a list of items and want to pass the item to the
-    projected component.
+    In Angular we can use content projection with the <em>&lt;ng-content&gt;</em> tag
+    to insert content inside another component. This is useful in many scenarios,
+    but it does not work when we have a list of items
+    for which we want to create a new instance of the projected content, for example:
   </p>
+
+  <app-code-section
+    [code]="code.nonWorkingListParent"
+    filename="some-parent.component.html"
+  ></app-code-section>
+
+  <app-code-section
+    [code]="code.nonWorkingList"
+    filename="non-working-list.component.html"
+  ></app-code-section>
+
   <p>
-    The following example shows how to create a list component that can have a
-    custom component for displaying items inside. This can be very useful if you
+    Here we would like the list component to create a new instance of the projected component for each data item,
+    but the content can only be projected once so that just won't work.
+  </p>
+
+  <h2>A solution</h2>
+
+  <p>
+    The following example shows how we can create a list component that will
+    instantiate a projected component for each list item. This can be very useful if you
     would like to have several lists in your application with the same style and
     functionalities for search/filter/pagination but with different content. The
     same technique could be used for other components that iterate over items
     and you would like to provide a custom component depending on where it is
     used, e.g. select/drop-downs.
   </p>
-  <p>
-    The two lists below are instances of the same list component but uses
-    different components to display the items inside.
-  </p>
-
-  <div class="lists">
-    <app-cats></app-cats>
-    <app-dogs></app-dogs>
-  </div>
 
   <p>
-    In the list component we have an input for the list of item data, and a
+    To achieve this, in the list component we have an input for the list of item data, and a
     template reference with the component to be used for displaying each item.
   </p>
 
   <app-code-section
     [code]="code.listTs"
-    [filename]="'list.component.ts'"
+    filename="list.component.ts"
   ></app-code-section>
 
   <p>
@@ -55,7 +66,7 @@
 
   <app-code-section
     [code]="code.listHtml"
-    [filename]="'list.component.html'"
+    filename="list.component.html"
   ></app-code-section>
 
   <p>
@@ -67,8 +78,18 @@
 
   <app-code-section
     [code]="code.cats"
-    [filename]="'cats.component.html'"
+    filename="cats.component.html"
   ></app-code-section>
+
+  <p>
+    The two lists below are instances of the same list component but uses
+    different components to display the items inside.
+  </p>
+
+  <div class="lists">
+    <app-cats></app-cats>
+    <app-dogs></app-dogs>
+  </div>
 
   <p>
     See full source code on <a href="https://github.com/Arthoo/AngularExamples">Github</a>.

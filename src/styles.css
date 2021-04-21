@@ -26,8 +26,12 @@ h5 {
   font-weight: 400;
 }
 
+h2 {
+  text-decoration: underline;
+}
+
 p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .content {
